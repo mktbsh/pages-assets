@@ -11,7 +11,10 @@
     console.log(srcDomain);
     window.srcDomain = srcDomain;
     window.addEventListener('message', (event) => {
-      console.log(event.origin);
+      console.log('message received', {
+        origin: event.origin,
+        data: event.data
+      });
     });
   </script>
 </body>
